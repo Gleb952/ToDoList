@@ -1,0 +1,25 @@
+body {
+    margin-top: 100px;
+    font-family: 'Courier New';
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #dd03e4, #5611ec);
+}
+
+#input {
+    width: 40%;
+    padding: 8px;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    color: black;
+}
+#buttonClick {
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid lightgray;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+}
