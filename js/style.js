@@ -45,6 +45,8 @@ window.onload = function () {
         out();
 
         localStorage.setItem('todo', JSON.stringify(toDoList));
+
+        
         document.getElementById('buttonDel').onclick = function() {
             for (let i = 0; i <= toDoList.length; i++) {
                 /* if (toDoList[i].id == id) */
