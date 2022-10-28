@@ -13,6 +13,7 @@ body {
     border: 1px solid lightgray;
     color: black;
 }
+
 #buttonClick {
     margin-top: 1rem;
     background-color: whitesmoke;
@@ -22,4 +23,23 @@ body {
     border-radius: 5px;
     cursor: pointer;
     padding: 8px;
+}
+#out{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    padding: 1rem;
+    color: #454545;
+    margin-top: 10px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid lightgray;
+    text-transform: uppercase;
 }

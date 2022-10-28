@@ -11,9 +11,9 @@ window.onload = function () {
         for (var key in toDoList) {
 
             if (toDoList[key].check == true) {
-                out += '<input type="checkbox" checked>' + '<button id="buttonDel">Delete</button>'
+                out += '<div class="box"><input type="checkbox" checked>' + '<button id="buttonDel">Delete</button></div>'
             } else {
-                out += '<input type="checkbox">' + '<button id="buttonDel">Delete</button>'
+                out += '<div class="box"><input type="checkbox">' + '<button id="buttonDel">Delete</button></div>'
             }
 
             out += toDoList[key].todo + "</br>";
