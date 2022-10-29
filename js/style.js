@@ -1,54 +1,25 @@
-window.onload = function () {
-    var toDoList = [];
-    if (localStorage.getItem('todo') != undefined) {
-
-        toDoList = JSON.parse(localStorage.getItem('todo'));
-        out();
+document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Please Enter a Task")
     }
 
-    function out() {
-        var out = "";
-        for (var key in toDoList) {
+    else{
+        document.querySelector('#out').innerHTML += `
+            <div class="task box">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span> 
+                <button class="delete">
+                    <i class="far fa-trash-alt">Delete</i>
+                </button>
+            </div>
+        `;
 
-            if (toDoList[key].check == true) {
-                out += '<div class="box"><input type="checkbox" checked>' + '<button id="buttonDel">Delete</button>'
-            } else {
-                out += '</div><div class="box"><input type="checkbox">' + '<button id="buttonDel">Delete</button>'
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
             }
-
-            out += toDoList[key].todo + "</br>";
-
         }
-        document.getElementById("out").innerHTML = out;
     }
-
-    document.getElementById('buttonClick').onclick = function buttonToDo() {
-        function getNewID(arr) {
-            var max = 1;
-            for (const item of arr) {
-                if (item.id > max) max = item.id
-            }
-            return max + 1;
-
-        }
-
-        var buttonClick = document.getElementById('input').value;
-        var temp = {};
-        temp.todo = buttonClick;
-        temp.check = false;
-        temp.id = getNewID(toDoList);
-        var i = toDoList.length;
-        toDoList[i] = temp;
-        console.log(toDoList);
-
-
-        out();
-
-        localStorage.setItem('todo', JSON.stringify(toDoList));
-
-
-
-    }
-
-
 }
