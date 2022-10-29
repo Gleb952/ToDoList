@@ -46,14 +46,7 @@ window.onload = function () {
 
         localStorage.setItem('todo', JSON.stringify(toDoList));
 
-        
-        document.getElementById('buttonDel').onclick = function() {
-            for (let i = 0; i <= toDoList.length; i++) {
-                /* if (toDoList[i].id == id) */
-                    toDoList.splice(i, 1);
-            }
-            console.log(toDoList);
-        }
+
 
     }
 
