@@ -22,4 +22,9 @@ document.querySelector('#push').onclick = function(){
             }
         }
     }
+    function addToLocalStorage (){
+    localStorage.setItem('addToLocalStorage', JSON.stringify(current_tasks));
+
+
+    }
 }
